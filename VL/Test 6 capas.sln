@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
 VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Test 6 capas", "Test 6 capas\Test 6 capas.csproj", "{50BDE18F-6FED-4482-8425-3AB31A385700}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VL", "Test 6 capas\VL.csproj", "{50BDE18F-6FED-4482-8425-3AB31A385700}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BLL", "BLL\BLL.csproj", "{5690335D-93AA-4411-AAA8-340D36EC7A46}"
 EndProject
