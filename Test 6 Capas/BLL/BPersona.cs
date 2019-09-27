@@ -11,9 +11,22 @@ namespace BLL
 {
     public class BPersona : IABMC
     {
+        OPersona oPersona;
+        public BPersona()
+        {
+            oPersona = new OPersona();
+        }
         public void Alta()
         {
-            throw new NotImplementedException();
+            try
+            {
+                oPersona.Alta();
+            }
+            catch (Exception ex)
+            {
+
+                throw;
+            }
         }
 
         public void Baja()

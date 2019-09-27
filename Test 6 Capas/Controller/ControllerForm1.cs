@@ -13,15 +13,29 @@ namespace Controller
     public class ControllerForm1 : IABMC
     {
         Form Form1;
-        EPersona EntPersona;
+        EPersona ePersona;
+        BPersona bPersona;
         public ControllerForm1(Form Form1)
         {
             this.Form1 = Form1;
+            bPersona = new BPersona();
         }
 
         public void Alta()
         {
-            throw new NotImplementedException();
+            try
+            {
+                int Id = int.Parse(Form1.Controls["textBoxId"].Text);
+                string Nombre = Form1.Controls["textBoxNombre"].Text;
+                string Apellido = Form1.Controls["textBoxApellido"].Text;
+                EPersona epersona = new EPersona(Id, Nombre, Apellido);
+                bPersona.Alta();
+            }
+            catch (Exception ex)
+            {
+
+                throw;
+            }
         }
 
         public void Baja()

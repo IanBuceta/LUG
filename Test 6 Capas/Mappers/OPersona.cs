@@ -9,24 +9,24 @@ using Interfaces;
 
 namespace ORM
 {
-    public class OPersona : IABMC<EPersona>
+    public class OPersona : IABMC
     {
-        public void Alta(EPersona Object)
+        public void Alta()
         {
             throw new NotImplementedException();
         }
 
-        public void Baja(EPersona Object)
+        public void Baja()
         {
             throw new NotImplementedException();
         }
 
-        public void Consulta(EPersona FromObject, EPersona ToObject)
+        public void Consulta()
         {
             throw new NotImplementedException();
         }
 
-        public void Modificacion(EPersona Object)
+        public void Modificacion()
         {
             throw new NotImplementedException();
         }
