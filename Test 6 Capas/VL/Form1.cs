@@ -23,5 +23,10 @@ namespace VL
         {
             ControllerF1 = new ControllerForm1(this);
         }
+
+        private void buttonAlta_Click(object sender, EventArgs e)
+        {
+            ControllerF1.Alta();
+        }
     }
 }
