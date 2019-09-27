@@ -12,6 +12,7 @@ namespace Controller
     public class ControllerForm1
     {
         Form Form1;
+        EPersona EntPersona;
         public ControllerForm1(Form Form1)
         {
             this.Form1 = Form1;
