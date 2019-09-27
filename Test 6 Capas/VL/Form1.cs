@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Controller;
 
 namespace VL
 {
@@ -15,6 +16,12 @@ namespace VL
         public Form1()
         {
             InitializeComponent();
+        }
+
+        ControllerForm1 ControllerF1;
+        private void Form1_Load(object sender, EventArgs e)
+        {
+            ControllerF1 = new ControllerForm1(this);
         }
     }
 }
