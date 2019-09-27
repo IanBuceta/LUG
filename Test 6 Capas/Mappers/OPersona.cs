@@ -1,5 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;S
+using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -11,9 +11,14 @@ namespace ORM
 {
     public class OPersona : IABMC
     {
+        ServicioDAL SDAL;
+        public OPersona()
+        {
+            SDAL = new ServicioDAL();
+        } 
         public void Alta()
         {
-            throw new NotImplementedException();
+            SDAL.RetornaDataTableVacio("Persona");
         }
 
         public void Baja()
