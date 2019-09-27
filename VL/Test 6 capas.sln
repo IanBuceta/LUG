@@ -9,7 +9,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BLL", "BLL\BLL.csproj", "{5
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Controller", "Controller\Controller.csproj", "{C77FCC86-CBBF-4E08-8138-B28C4225192A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Mappers", "Mappers\Mappers.csproj", "{6D3A7970-FA94-400C-9290-D2C6E4CBBCC4}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ORM", "Mappers\ORM.csproj", "{6D3A7970-FA94-400C-9290-D2C6E4CBBCC4}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Entities", "Entities\Entities.csproj", "{322EE074-D8B9-4D0F-A619-B195202BA1C9}"
 EndProject
