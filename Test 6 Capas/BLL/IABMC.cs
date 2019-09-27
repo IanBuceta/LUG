@@ -3,13 +3,13 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using DAL;
 using Entities;
+using ORM;
 using Interfaces;
 
-namespace ORM
+namespace BLL
 {
-    public class OPersona : IABMC<EPersona>
+    public class IABMC : IABMC<EPersona>
     {
         public void Alta(EPersona Object)
         {

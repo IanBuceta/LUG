@@ -40,13 +40,17 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="BPersona.cs" />
+    <Compile Include="IABMC.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Entities\Entities.csproj">
       <Project>{322ee074-d8b9-4d0f-a619-b195202ba1c9}</Project>
       <Name>Entities</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Interfaces\Interfaces.csproj">
+      <Project>{F0EFD065-9B59-4142-B63C-C83F7E0D18C9}</Project>
+      <Name>Interfaces</Name>
     </ProjectReference>
     <ProjectReference Include="..\Mappers\ORM.csproj">
       <Project>{6d3a7970-fa94-400c-9290-d2c6e4cbbcc4}</Project>
