@@ -6,19 +6,23 @@ using System.Threading.Tasks;
 using DAL;
 using Entities;
 using Interfaces;
+using System.Data;
 
 namespace ORM
 {
     public class OPersona : IABMC
     {
-        ServicioDAL SDAL;
+        ServicioDAL sDAL;
         public OPersona()
         {
-            SDAL = new ServicioDAL();
+            sDAL = new ServicioDAL();
         } 
         public void Alta()
         {
-            SDAL.RetornaDataTableVacio("Persona");
+            DataTable Dt = sDAL.RetornaDataTableVacio("Persona");
+            object[] O = new object[] {pObject.id, etc} // TODO Agregar interfaz
+            Dt.Rows.Add(O);
+            sDAL.Guardar(Dt);
         }
 
         public void Baja()

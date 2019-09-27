@@ -13,11 +13,16 @@ namespace DAL
         DataSet Ds;
         //DataTable Dt;
         SqlDataAdapter Da;
+        SqlCommandBuilder Cb;
 
         public ServicioDAL()
         {
             Ds = new DataSet("test");
             Da = new SqlDataAdapter("Select * from Persona", "");
+            Cb = new SqlCommandBuilder(Da);
+            Da.UpdateCommand = Cb.GetUpdateCommand();
+            Da.InsertCommand = Cb.GetInsertCommand();
+            Da.DeleteCommand = Cb.GetDeleteCommand();
         }
 
         public DataTable RetornaDataTableVacio(string NombreDataTable)
@@ -25,6 +30,10 @@ namespace DAL
             Da.SelectCommand.CommandText = $"Select * from {NombreDataTable}";
             DataTable Dt = new DataTable();
             return Da.FillSchema(Dt, SchemaType.Mapped);
+        }
+        public void Guardar(DataTable Dt)
+        {
+            Da.Update(Dt);
         }
     }
 }
