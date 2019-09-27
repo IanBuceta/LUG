@@ -18,15 +18,7 @@ namespace BLL
         }
         public void Alta()
         {
-            try
-            {
-                oPersona.Alta();
-            }
-            catch (Exception ex)
-            {
-
-                throw;
-            }
+            oPersona.Alta();
         }
 
         public void Baja()

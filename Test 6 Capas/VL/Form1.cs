@@ -26,7 +26,14 @@ namespace VL
 
         private void buttonAlta_Click(object sender, EventArgs e)
         {
-            ControllerF1.Alta();
+            try
+            {
+                ControllerF1.Alta();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
     }
 }

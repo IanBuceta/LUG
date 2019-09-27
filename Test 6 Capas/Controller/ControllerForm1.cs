@@ -23,19 +23,11 @@ namespace Controller
 
         public void Alta()
         {
-            try
-            {
-                int Id = int.Parse(Form1.Controls["textBoxId"].Text);
-                string Nombre = Form1.Controls["textBoxNombre"].Text;
-                string Apellido = Form1.Controls["textBoxApellido"].Text;
-                EPersona epersona = new EPersona(Id, Nombre, Apellido);
-                bPersona.Alta();
-            }
-            catch (Exception ex)
-            {
-
-                throw;
-            }
+            int Id = int.Parse(Form1.Controls["textBoxId"].Text);
+            string Nombre = Form1.Controls["textBoxNombre"].Text;
+            string Apellido = Form1.Controls["textBoxApellido"].Text;
+            EPersona epersona = new EPersona(Id, Nombre, Apellido);
+            bPersona.Alta();
         }
 
         public void Baja()
