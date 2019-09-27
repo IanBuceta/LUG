@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Test_6_capas.Properties
+namespace VL.Properties
 {
 
 

@@ -3,8 +3,10 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using DAL;
+using Entities;
 
-namespace Controller
+namespace ORM
 {
     public class Class1
     {

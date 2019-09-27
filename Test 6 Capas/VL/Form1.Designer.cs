@@ -1,4 +1,4 @@
-﻿namespace Test_6_capas
+﻿namespace VL
 {
     partial class Form1
     {
