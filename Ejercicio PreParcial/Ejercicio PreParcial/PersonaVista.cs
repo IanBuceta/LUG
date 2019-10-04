@@ -6,25 +6,21 @@ using System.Threading.Tasks;
 
 namespace Ejercicio_PreParcial
 {
-    public class Persona
+    class PersonaVista
     {
-        public List<Compra> Compras { get; set; }
-        public Persona(string DNI, string Nombre, string Apellido)
+        public List<PersonaVista> LPV { get; set; }
+        public PersonaVista(string DNI, string Nombre, string Apellido)
         {
             this.DNI = DNI;
             this.Nombre = Nombre;
             this.Apellido = Apellido;
-            Compras = new List<Compra>();
+            LPV = new List<PersonaVista>();
         }
         public string DNI { get; set; }
         public string Nombre { get; set; }
         public string Apellido { get; set; }
-
-        public void CargarCompra(Compra C)
-        {
-            Compras.Add(C);
-        }
-        
+        public int NroCompras { get; set; }
+        public decimal TotalGastado { get; set; }
+        public decimal MayorCompra { get; set; }
     }
-
 }

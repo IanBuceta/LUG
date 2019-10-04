@@ -47,6 +47,7 @@ namespace Ejercicio_PreParcial
                     decimal Importe = decimal.Parse(Input("Importe"));
                     Personas.Last().CargarCompra(new Compra(Id, Importe));
                 }
+                Mostrar(dataGridViewPersona, Personas);
             }
             catch (Exception ex)
             {
@@ -57,6 +58,26 @@ namespace Ejercicio_PreParcial
         {
             Dgv.DataSource = null;
             Dgv.DataSource = O;
+        }
+        private Persona PersonaSeleccionada
+        {
+            get
+            {
+                return dataGridViewPersona.SelectedRows[0].DataBoundItem as Persona;
+            }
+        }
+        private void DataGridViewPersona_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            try
+            {
+                Mostrar(dataGridViewCompra, PersonaSeleccionada.Compras);
+                Mostrar(dataGridViewDatos, )
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            
         }
     }
 }
