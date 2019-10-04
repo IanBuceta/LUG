@@ -70,8 +70,13 @@ namespace Ejercicio_PreParcial
         {
             try
             {
+                List<PersonaVista> PersonaVistas = new List<PersonaVista>();
+                foreach (Persona P in Personas)
+                {
+                    PersonaVistas.Add(new PersonaVista(P.DNI, P.Nombre, P.Apellido, P.Compras));
+                }
                 Mostrar(dataGridViewCompra, PersonaSeleccionada.Compras);
-                Mostrar(dataGridViewDatos, )
+                Mostrar(dataGridViewDatos, PersonaVistas);
             }
             catch (Exception ex)
             {

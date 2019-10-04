@@ -8,19 +8,41 @@ namespace Ejercicio_PreParcial
 {
     class PersonaVista
     {
-        public List<PersonaVista> LPV { get; set; }
-        public PersonaVista(string DNI, string Nombre, string Apellido)
+        List<Compra> Compras;
+
+        public PersonaVista(string DNI, string Nombre, string Apellido, List<Compra> Compras)
         {
             this.DNI = DNI;
             this.Nombre = Nombre;
             this.Apellido = Apellido;
-            LPV = new List<PersonaVista>();
+            this.Compras = Compras;            
         }
+
         public string DNI { get; set; }
         public string Nombre { get; set; }
         public string Apellido { get; set; }
-        public int NroCompras { get; set; }
-        public decimal TotalGastado { get; set; }
-        public decimal MayorCompra { get; set; }
+        public int NroCompras
+        {
+            get
+            {
+                return Compras.Count;
+            }
+        }
+        public decimal TotalGastado
+        {
+            get
+            {
+                return Compras.Sum(x => x.Importe);
+            }
+        }
+        public decimal MayorCompra
+        {
+            get
+            {
+                return Compras.Max(x => x.Importe);
+            }
+        }
+                
+        
     }
 }
