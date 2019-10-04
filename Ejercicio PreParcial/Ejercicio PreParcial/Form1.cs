@@ -21,9 +21,14 @@ namespace Ejercicio_PreParcial
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            foreach (DataGridView dg in this.Controls)
+            Personas = new List<Persona>();
+            foreach (Control c in this.Controls)
             {
-                dg.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+                if (c is DataGridView)
+                {
+                    DataGridView dg = c as DataGridView;
+                    dg.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+                }                
             }
         }
         public string Input(string Text)
