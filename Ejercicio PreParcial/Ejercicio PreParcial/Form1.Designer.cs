@@ -44,26 +44,35 @@
             // 
             // dataGridViewPersona
             // 
+            this.dataGridViewPersona.AllowUserToAddRows = false;
+            this.dataGridViewPersona.AllowUserToDeleteRows = false;
             this.dataGridViewPersona.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridViewPersona.Location = new System.Drawing.Point(12, 29);
             this.dataGridViewPersona.Name = "dataGridViewPersona";
+            this.dataGridViewPersona.ReadOnly = true;
             this.dataGridViewPersona.Size = new System.Drawing.Size(350, 221);
             this.dataGridViewPersona.TabIndex = 0;
             this.dataGridViewPersona.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DataGridViewPersona_CellClick);
             // 
             // dataGridViewCompra
             // 
+            this.dataGridViewCompra.AllowUserToAddRows = false;
+            this.dataGridViewCompra.AllowUserToDeleteRows = false;
             this.dataGridViewCompra.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridViewCompra.Location = new System.Drawing.Point(438, 29);
             this.dataGridViewCompra.Name = "dataGridViewCompra";
+            this.dataGridViewCompra.ReadOnly = true;
             this.dataGridViewCompra.Size = new System.Drawing.Size(350, 221);
             this.dataGridViewCompra.TabIndex = 1;
             // 
             // dataGridViewDatos
             // 
+            this.dataGridViewDatos.AllowUserToAddRows = false;
+            this.dataGridViewDatos.AllowUserToDeleteRows = false;
             this.dataGridViewDatos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridViewDatos.Location = new System.Drawing.Point(12, 279);
             this.dataGridViewDatos.Name = "dataGridViewDatos";
+            this.dataGridViewDatos.ReadOnly = true;
             this.dataGridViewDatos.Size = new System.Drawing.Size(350, 221);
             this.dataGridViewDatos.TabIndex = 2;
             // 
