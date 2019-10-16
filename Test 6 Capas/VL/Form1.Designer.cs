@@ -32,6 +32,9 @@
             this.buttonAlta = new System.Windows.Forms.Button();
             this.textBoxApellido = new System.Windows.Forms.TextBox();
             this.textBoxId = new System.Windows.Forms.TextBox();
+            this.dataGridPersona = new System.Windows.Forms.DataGridView();
+            this.buttonBaja = new System.Windows.Forms.Button();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridPersona)).BeginInit();
             this.SuspendLayout();
             // 
             // textBoxNombre
@@ -65,17 +68,43 @@
             this.textBoxId.Size = new System.Drawing.Size(100, 20);
             this.textBoxId.TabIndex = 3;
             // 
+            // dataGridPersona
+            // 
+            this.dataGridPersona.AllowUserToAddRows = false;
+            this.dataGridPersona.AllowUserToDeleteRows = false;
+            this.dataGridPersona.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridPersona.Location = new System.Drawing.Point(191, 36);
+            this.dataGridPersona.MultiSelect = false;
+            this.dataGridPersona.Name = "dataGridPersona";
+            this.dataGridPersona.ReadOnly = true;
+            this.dataGridPersona.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dataGridPersona.Size = new System.Drawing.Size(240, 150);
+            this.dataGridPersona.TabIndex = 4;
+            // 
+            // buttonBaja
+            // 
+            this.buttonBaja.Location = new System.Drawing.Point(13, 154);
+            this.buttonBaja.Name = "buttonBaja";
+            this.buttonBaja.Size = new System.Drawing.Size(74, 23);
+            this.buttonBaja.TabIndex = 5;
+            this.buttonBaja.Text = "Baja";
+            this.buttonBaja.UseVisualStyleBackColor = true;
+            this.buttonBaja.Click += new System.EventHandler(this.ButtonBaja_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(474, 340);
+            this.Controls.Add(this.buttonBaja);
+            this.Controls.Add(this.dataGridPersona);
             this.Controls.Add(this.textBoxId);
             this.Controls.Add(this.textBoxApellido);
             this.Controls.Add(this.buttonAlta);
             this.Controls.Add(this.textBoxNombre);
             this.Name = "Form1";
             this.Text = "Form1";
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridPersona)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -87,6 +116,8 @@
         private System.Windows.Forms.Button buttonAlta;
         private System.Windows.Forms.TextBox textBoxApellido;
         private System.Windows.Forms.TextBox textBoxId;
+        private System.Windows.Forms.DataGridView dataGridPersona;
+        private System.Windows.Forms.Button buttonBaja;
     }
 }
 

@@ -21,6 +21,12 @@ namespace Controller
             bPersona = new BPersona();
         }
 
+        public EPersona PersonaSeleccionada()
+        {
+            DataGridView dgv = Form1.Controls["dataGridPersona"] as DataGridView;
+            return dgv.SelectedRows[0].DataBoundItem as EPersona;
+        }
+
         public void Alta()
         {
             int Id = int.Parse(Form1.Controls["textBoxId"].Text);
@@ -32,7 +38,7 @@ namespace Controller
 
         public void Baja()
         {
-            throw new NotImplementedException();
+            bPersona.Baja();
         }
 
         public void Modificacion()

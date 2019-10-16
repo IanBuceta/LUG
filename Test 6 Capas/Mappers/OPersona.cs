@@ -15,7 +15,7 @@ namespace ORM
         ServicioDAL sDAL;
         public OPersona()
         {
-            sDAL = new ServicioDAL();
+            sDAL = new ServicioDAL(EPersona pObject);
         } 
         public void Alta()
         {
@@ -27,7 +27,7 @@ namespace ORM
 
         public void Baja()
         {
-            throw new NotImplementedException();
+            ;
         }
 
         public void Consulta()

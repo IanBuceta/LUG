@@ -35,5 +35,18 @@ namespace VL
                 MessageBox.Show(ex.Message);
             }
         }
+
+        private void ButtonBaja_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                ControllerF1.Baja()
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+                throw;
+            }
+        }
     }
 }

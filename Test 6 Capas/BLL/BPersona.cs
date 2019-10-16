@@ -23,7 +23,7 @@ namespace BLL
 
         public void Baja()
         {
-            throw new NotImplementedException();
+            oPersona.Baja();
         }
 
         public void Consulta()

@@ -14,15 +14,20 @@ namespace DAL // DAL
         //DataTable Dt;
         SqlDataAdapter Da;
         SqlCommandBuilder Cb;
+        const string StringDeConexion = @"Data Source=localhost;Initial Catalog=LUG;Integrated Security=True";
 
         public ServicioDAL()
         {
-            Ds = new DataSet("test");
-            Da = new SqlDataAdapter("Select * from Persona", "");
+            Ds = new DataSet();
+            Da = new SqlDataAdapter("Select * from Persona", StringDeConexion);
             Cb = new SqlCommandBuilder(Da);
+
             Da.UpdateCommand = Cb.GetUpdateCommand();
             Da.InsertCommand = Cb.GetInsertCommand();
             Da.DeleteCommand = Cb.GetDeleteCommand();
+
+            Da.Fill(Ds, "Persona");
+            Ds.Tables[0].PrimaryKey = new DataColumn[] { Ds.Tables[0].Columns[0] };
         }
 
         public DataTable RetornaDataTableVacio(string NombreDataTable)

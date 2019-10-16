@@ -12,5 +12,14 @@ namespace Interfaces
         void Baja();
         void Modificacion();
         void Consulta();
+        void ConsultaTodos();
+    }
+    public interface IABMC<T>
+    {
+        void Alta();
+        void Baja();
+        void Modificacion();
+        void Consulta();
+        void ConsultaTodos();
     }
 }
