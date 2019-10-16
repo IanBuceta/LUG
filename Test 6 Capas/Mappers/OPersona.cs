@@ -10,32 +10,42 @@ using System.Data;
 
 namespace ORM
 {
-    public class OPersona : IABMC
+    public class OPersona : IABMC<EPersona>
     {
         ServicioDAL sDAL;
         public OPersona()
         {
-            sDAL = new ServicioDAL(EPersona pObject);
-        } 
-        public void Alta()
+            sDAL = new ServicioDAL();
+        }         
+
+        public void Alta(EPersona pObject)
         {
             DataTable Dt = sDAL.RetornaDataTableVacio("Persona");
-            object[] O = new object[] {pObject.id, etc} // TODO Agregar interfaz
+            object[] O = new object[] { pObject.Id, pObject.Nombre, pObject.Apellido }; // TODO Agregar interfaz
             Dt.Rows.Add(O);
             sDAL.Guardar(Dt);
         }
 
-        public void Baja()
+        public void Baja(EPersona pObject)
         {
-            ;
+            DataTable Dt = sDAL.RetornaDataTableVacio("Persona");
+            DataRow Dr = Dt.NewRow();
+            object[] O = new object[] { pObject.Id, pObject.Nombre, pObject.Apellido };
+            Dt.Rows.Add(Dt);
+            sDAL.BajaBd(Dt);
         }
 
-        public void Consulta()
+        public void Consulta(EPersona pObject)
         {
             throw new NotImplementedException();
         }
 
-        public void Modificacion()
+        public void ConsultaTodos()
+        {
+            throw new NotImplementedException();
+        }
+
+        public void Modificacion(EPersona pObject)
         {
             throw new NotImplementedException();
         }

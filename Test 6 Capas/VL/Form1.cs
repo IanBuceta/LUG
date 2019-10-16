@@ -40,7 +40,7 @@ namespace VL
         {
             try
             {
-                ControllerF1.Baja()
+                ControllerF1.Baja();
             }
             catch (Exception ex)
             {

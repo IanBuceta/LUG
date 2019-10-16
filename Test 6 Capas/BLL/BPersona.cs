@@ -9,29 +9,34 @@ using Interfaces;
 
 namespace BLL
 {
-    public class BPersona : IABMC
+    public class BPersona : IABMC<EPersona>
     {
         OPersona oPersona;
         public BPersona()
         {
             oPersona = new OPersona();
         }
-        public void Alta()
+        public void Alta(EPersona pObject)
         {
-            oPersona.Alta();
+            oPersona.Alta(pObject);
         }
 
-        public void Baja()
+        public void Baja(EPersona pObject)
         {
-            oPersona.Baja();
+            oPersona.Baja(pObject);
         }
 
-        public void Consulta()
+        public void Consulta(EPersona pObject)
         {
             throw new NotImplementedException();
         }
 
-        public void Modificacion()
+        public void ConsultaTodos()
+        {
+            throw new NotImplementedException();
+        }
+
+        public void Modificacion(EPersona pObject)
         {
             throw new NotImplementedException();
         }

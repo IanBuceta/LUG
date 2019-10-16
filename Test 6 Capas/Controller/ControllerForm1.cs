@@ -33,12 +33,12 @@ namespace Controller
             string Nombre = Form1.Controls["textBoxNombre"].Text;
             string Apellido = Form1.Controls["textBoxApellido"].Text;
             EPersona epersona = new EPersona(Id, Nombre, Apellido);
-            bPersona.Alta();
+            bPersona.Alta(epersona);
         }
 
         public void Baja()
         {
-            bPersona.Baja();
+            bPersona.Baja(PersonaSeleccionada());
         }
 
         public void Modificacion()
@@ -47,6 +47,11 @@ namespace Controller
         }
 
         public void Consulta()
+        {
+            throw new NotImplementedException();
+        }
+
+        public void ConsultaTodos()
         {
             throw new NotImplementedException();
         }
