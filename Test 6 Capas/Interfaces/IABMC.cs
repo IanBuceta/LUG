@@ -20,6 +20,6 @@ namespace Interfaces
         void Baja(T pObject);
         void Modificacion(T pObject);
         void Consulta(T pObject);
-        void ConsultaTodos();
+        List<T> ConsultaTodos();
     }
 }

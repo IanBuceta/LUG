@@ -31,9 +31,9 @@ namespace BLL
             throw new NotImplementedException();
         }
 
-        public void ConsultaTodos()
+        public List<EPersona> ConsultaTodos()
         {
-            throw new NotImplementedException();
+            return oPersona.ConsultaTodos();
         }
 
         public void Modificacion(EPersona pObject)

@@ -15,18 +15,23 @@ namespace Controller
         Form Form1;
         EPersona ePersona;
         BPersona bPersona;
+        DataGridView Dgv;
         public ControllerForm1(Form Form1)
         {
             this.Form1 = Form1;
             bPersona = new BPersona();
+            Dgv = Form1.Controls["dataGridPersona"] as DataGridView;
         }
 
         public EPersona PersonaSeleccionada()
-        {
-            DataGridView dgv = Form1.Controls["dataGridPersona"] as DataGridView;
-            return dgv.SelectedRows[0].DataBoundItem as EPersona;
+        {            
+            return Dgv.SelectedRows[0].DataBoundItem as EPersona;
         }
-
+        public void Mostrar()
+        {
+            Dgv.DataSource = null;
+            Dgv.DataSource = bPersona.ConsultaTodos();
+        }
         public void Alta()
         {
             int Id = int.Parse(Form1.Controls["textBoxId"].Text);

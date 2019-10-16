@@ -40,9 +40,15 @@ namespace ORM
             throw new NotImplementedException();
         }
 
-        public void ConsultaTodos()
+        public List<EPersona> ConsultaTodos()
         {
-            throw new NotImplementedException();
+            DataTable Dt = sDAL.RetornaDataTableVacio("Persona");
+            List<EPersona> Personas = new List<EPersona>();
+            foreach (DataRow dataRow in Dt.Rows)
+            {
+                Personas.Add(new EPersona(dataRow.Field<int>(0), dataRow.Field<string>(1), dataRow.Field<string>(2)));
+            }
+            return Personas;
         }
 
         public void Modificacion(EPersona pObject)
