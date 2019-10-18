@@ -14,7 +14,13 @@ namespace VL
     {
         public Form1()
         {
-            InitializeComponent();
+            InitializeComponent();            
+        }
+
+        private void NumericBox1_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            
         }
     }
+
 }
