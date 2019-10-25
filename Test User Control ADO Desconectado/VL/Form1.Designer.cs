@@ -28,12 +28,32 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
+            this.paginador1 = new VL.Paginador();
+            this.SuspendLayout();
+            // 
+            // paginador1
+            // 
+            this.paginador1.Location = new System.Drawing.Point(12, 9);
+            this.paginador1.Name = "paginador1";
+            this.paginador1.Size = new System.Drawing.Size(380, 282);
+            this.paginador1.TabIndex = 0;
+            // 
+            // Form1
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.ClientSize = new System.Drawing.Size(400, 303);
+            this.Controls.Add(this.paginador1);
+            this.Name = "Form1";
             this.Text = "Form1";
+            this.Load += new System.EventHandler(this.Form1_Load);
+            this.ResumeLayout(false);
+
         }
 
         #endregion
+
+        private Paginador paginador1;
     }
 }
 
