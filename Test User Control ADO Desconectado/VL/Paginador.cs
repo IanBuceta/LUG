@@ -24,7 +24,7 @@ namespace VL
             try
             {
                 int Id = int.Parse(Input("Id", ""));
-                string Nombre = Input("Apellido", "");
+                string Nombre = Input("Nombre", "");
                 string Apellido = Input("Apellido", "");
                 Ges.Agregar(new Persona(Id, Nombre, Apellido));
                 Mostrar();
