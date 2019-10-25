@@ -52,12 +52,14 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="Gestor.cs" />
     <Compile Include="Paginador.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="Paginador.Designer.cs">
       <DependentUpon>Paginador.cs</DependentUpon>
     </Compile>
+    <Compile Include="Persona.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Paginador.resx">
