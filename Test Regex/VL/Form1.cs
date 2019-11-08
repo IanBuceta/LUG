@@ -16,6 +16,7 @@ namespace VL
 {
     public partial class Form1 : Form
     {
+        Regex _Re;
         public Form1()
         {
             InitializeComponent();
@@ -23,7 +24,7 @@ namespace VL
 
         private void Form1_Load(object sender, EventArgs e)
         {
-
+            _Re = new Regex("");
         }
     }
 }
