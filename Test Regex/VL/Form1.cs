@@ -36,8 +36,9 @@ namespace VL
         {
             try
             {
-                _Re = new Regex(textBoxFiltro.Text);
+                _Re = new Regex(textBoxFiltro.Text, RegexOptions.Multiline);
                 MatchCollection matchCollection = _Re.Matches(textBoxIngresar.Text);
+                textBoxMatches.Clear();
                 textBoxMatches.Text = $"Matches Found: { matchCollection.Count }\r\n\r\n";
                 foreach (Match match in matchCollection)
                 {
