@@ -26,5 +26,10 @@ namespace VL
         {
             _Re = new Regex("");
         }
+
+        private void textBoxFiltro_TextChanged(object sender, EventArgs e)
+        {
+            _Re = new Regex(textBoxFiltro.Text);
+        }
     }
 }
