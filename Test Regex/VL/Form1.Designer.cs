@@ -30,6 +30,7 @@
         {
             this.textBoxFiltro = new System.Windows.Forms.TextBox();
             this.textBoxMatches = new System.Windows.Forms.TextBox();
+            this.textBoxIngresar = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // textBoxFiltro
@@ -42,17 +43,26 @@
             // 
             // textBoxMatches
             // 
-            this.textBoxMatches.Location = new System.Drawing.Point(12, 39);
+            this.textBoxMatches.Location = new System.Drawing.Point(277, 39);
             this.textBoxMatches.Multiline = true;
             this.textBoxMatches.Name = "textBoxMatches";
-            this.textBoxMatches.Size = new System.Drawing.Size(520, 265);
+            this.textBoxMatches.Size = new System.Drawing.Size(255, 265);
             this.textBoxMatches.TabIndex = 1;
+            // 
+            // textBoxIngresar
+            // 
+            this.textBoxIngresar.Location = new System.Drawing.Point(13, 39);
+            this.textBoxIngresar.Multiline = true;
+            this.textBoxIngresar.Name = "textBoxIngresar";
+            this.textBoxIngresar.Size = new System.Drawing.Size(255, 265);
+            this.textBoxIngresar.TabIndex = 2;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(544, 316);
+            this.Controls.Add(this.textBoxIngresar);
             this.Controls.Add(this.textBoxMatches);
             this.Controls.Add(this.textBoxFiltro);
             this.Name = "Form1";
@@ -67,6 +77,7 @@
 
         private System.Windows.Forms.TextBox textBoxFiltro;
         private System.Windows.Forms.TextBox textBoxMatches;
+        private System.Windows.Forms.TextBox textBoxIngresar;
     }
 }
 
