@@ -29,7 +29,16 @@ namespace VL
 
         private void textBoxFiltro_TextChanged(object sender, EventArgs e)
         {
-            _Re = new Regex(textBoxFiltro.Text);
+            _Re = new Regex(textBoxFiltro.Text);            
+        }
+
+        private void textBoxIngresar_TextChanged(object sender, EventArgs e)
+        {
+            MatchCollection matchCollection = _Re.Matches(textBoxIngresar.Text);
+            foreach (var match in matchCollection)
+            {
+                textBoxMatches.Text += $" {match.ToString()} \n";
+            }
         }
     }
 }

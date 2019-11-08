@@ -56,6 +56,7 @@
             this.textBoxIngresar.Name = "textBoxIngresar";
             this.textBoxIngresar.Size = new System.Drawing.Size(255, 265);
             this.textBoxIngresar.TabIndex = 2;
+            this.textBoxIngresar.TextChanged += new System.EventHandler(this.textBoxIngresar_TextChanged);
             // 
             // Form1
             // 
