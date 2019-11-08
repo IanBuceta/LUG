@@ -6,7 +6,11 @@ using System.Threading.Tasks;
 using System.Data.SqlClient;
 using System.Data;
 
-namespace DAL // DAL
+/// <summary>
+/// La DAL no conoce a nadie, ya que toca la base de datos nomas. Las demas se comunican con este.
+/// </summary>
+
+namespace DAL
 {
     public class ServicioDAL
     {

@@ -8,6 +8,10 @@ using BLL;
 using System.Windows.Forms;
 using Interfaces;
 
+/// <summary>
+/// Controller conoce a: Entities, BLL e interfaces (y vista)
+/// </summary>
+
 namespace Controller
 {
     public class ControllerForm1 : IABMC

@@ -8,6 +8,9 @@ using Entities;
 using Interfaces;
 using System.Data;
 
+/// <summary>
+/// ORM coonoce a: DAL, Entities e interfaces.
+/// </summary>
 namespace ORM
 {
     public class OPersona : IABMC<EPersona>

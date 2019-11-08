@@ -7,6 +7,9 @@ using Entities;
 using ORM;
 using Interfaces;
 
+/// <summary>
+/// BLL conoce a: Entities, ORM e Interfaces.
+/// </summary>
 namespace BLL
 {
     public class BPersona : IABMC<EPersona>

@@ -9,6 +9,9 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using Controller;
 
+/// <summary>
+/// Vista solo conoce al controlador.
+/// </summary>
 namespace VL
 {
     public partial class Form1 : Form
