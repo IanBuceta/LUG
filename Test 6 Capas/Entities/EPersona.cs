@@ -6,6 +6,9 @@ using System.Threading.Tasks;
 
 namespace Entities
 {
+    /// <summary>
+    /// En la entities estan solo las clases, nada mas. Las reglas de negocios se manejan en BLL
+    /// </summary>
     public class EPersona
     {
         public int Id { get; set; }
