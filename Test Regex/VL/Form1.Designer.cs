@@ -39,7 +39,7 @@
             this.textBoxFiltro.Name = "textBoxFiltro";
             this.textBoxFiltro.Size = new System.Drawing.Size(519, 20);
             this.textBoxFiltro.TabIndex = 0;
-            this.textBoxFiltro.TextChanged += new System.EventHandler(this.textBoxFiltro_TextChanged);
+            this.textBoxFiltro.TextChanged += new System.EventHandler(this.textChanged);
             // 
             // textBoxMatches
             // 
@@ -56,7 +56,7 @@
             this.textBoxIngresar.Name = "textBoxIngresar";
             this.textBoxIngresar.Size = new System.Drawing.Size(255, 265);
             this.textBoxIngresar.TabIndex = 2;
-            this.textBoxIngresar.TextChanged += new System.EventHandler(this.textBoxIngresar_TextChanged);
+            this.textBoxIngresar.TextChanged += new System.EventHandler(this.textChanged);
             // 
             // Form1
             // 

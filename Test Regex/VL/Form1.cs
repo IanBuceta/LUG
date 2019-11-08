@@ -29,15 +29,23 @@ namespace VL
 
         private void textBoxFiltro_TextChanged(object sender, EventArgs e)
         {
-            _Re = new Regex(textBoxFiltro.Text);            
+
         }
 
-        private void textBoxIngresar_TextChanged(object sender, EventArgs e)
+        private void textChanged(object sender, EventArgs e)
         {
-            MatchCollection matchCollection = _Re.Matches(textBoxIngresar.Text);
-            foreach (var match in matchCollection)
+            try
             {
-                textBoxMatches.Text += $" {match.ToString()} \n";
+                _Re = new Regex(textBoxFiltro.Text);
+                MatchCollection matchCollection = _Re.Matches(textBoxIngresar.Text);
+                textBoxMatches.Text = $"Matches Found: { matchCollection.Count }\r\n\r\n";
+                foreach (Match match in matchCollection)
+                {
+                    textBoxMatches.Text += "\r\n" + match.Value;
+                }
+            }
+            catch (Exception)
+            {
             }
         }
     }
