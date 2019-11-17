@@ -32,10 +32,9 @@ namespace ORM
         public void Baja(EPersona pObject)
         {
             DataTable Dt = sDAL.RetornaDataTableVacio("Persona");
-            DataRow Dr = Dt.NewRow();
-            object[] O = new object[] { pObject.Id, pObject.Nombre, pObject.Apellido };
-            Dt.Rows.Add(Dt);
-            sDAL.BajaBd(Dt);
+            Dt.PrimaryKey = new DataColumn[] { Dt.Columns[0] };
+            Dt.Rows.Find(pObject.Id).Delete();
+            sDAL.Guardar(Dt);
         }
 
         public void Consulta(EPersona pObject)
@@ -56,7 +55,14 @@ namespace ORM
 
         public void Modificacion(EPersona pObject)
         {
-            throw new NotImplementedException();
+            DataTable Dt = sDAL.RetornaDataTableVacio("Persona");
+            Dt.PrimaryKey = new DataColumn[] { Dt.Columns[0] };
+            DataRow Dr = Dt.Rows.Find(pObject.Id);
+            Dr["Per_Id"] = pObject.Id;
+            Dr["Per_Nombre"] = pObject.Nombre;
+            Dr["Per_Apellido"] = pObject.Apellido;
+            sDAL.Guardar(Dt);
+
         }
     }
 }

@@ -40,11 +40,6 @@ namespace DAL
             DataTable Dt = new DataTable();
             return Da.FillSchema(Dt, SchemaType.Mapped);
         }
-        public void BajaBd(DataTable Dt)
-        {
-            Ds.Tables["Persona"].Rows.Find(Dt.Rows[0]).Delete();
-            Guardar(Dt);
-        }
         public void Guardar(DataTable Dt)
         {
             Da.Update(Dt);
