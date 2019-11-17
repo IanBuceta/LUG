@@ -17,7 +17,6 @@ namespace Controller
     public class ControllerForm1 : IABMC
     {
         Form Form1;
-        EPersona ePersona;
         BPersona bPersona;
         DataGridView Dgv;
         public ControllerForm1(Form Form1)
@@ -52,12 +51,26 @@ namespace Controller
 
         public void Modificacion()
         {
-            throw new NotImplementedException();
+            int Id = int.Parse(Form1.Controls["textBoxId"].Text);
+            string Nombre = Form1.Controls["textBoxNombre"].Text;
+            string Apellido = Form1.Controls["textBoxApellido"].Text;
+            EPersona epersona = new EPersona(Id, Nombre, Apellido);
+            bPersona.Modificacion(epersona, PersonaSeleccionada().Id);
         }
 
         public void Consulta()
         {
-            throw new NotImplementedException();
+            if (bPersona.Consulta(PersonaSeleccionada()) != null)
+            {
+                bPersona.Consulta(PersonaSeleccionada());
+            }
+        }
+
+        public void CeldaSeleccionada()
+        {
+            Form1.Controls["textBoxId"].Text = PersonaSeleccionada().Id.ToString();
+            Form1.Controls["textBoxNombre"].Text = PersonaSeleccionada().Nombre;
+            Form1.Controls["textBoxApellido"].Text = PersonaSeleccionada().Apellido;
         }
 
         public void ConsultaTodos()

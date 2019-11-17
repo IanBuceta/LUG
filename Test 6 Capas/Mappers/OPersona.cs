@@ -37,14 +37,23 @@ namespace ORM
             sDAL.Guardar(Dt);
         }
 
-        public void Consulta(EPersona pObject)
+        public EPersona Consulta(EPersona pObject)
         {
-            throw new NotImplementedException();
+            DataTable Dt = sDAL.Leer("Persona");
+            EPersona Persona = null;
+            foreach (DataRow dataRow in Dt.Rows)
+            {
+                if (dataRow.Field<int>(0) == pObject.Id)
+                {
+                    Persona = new EPersona(dataRow.Field<int>(0), dataRow.Field<string>(1), dataRow.Field<string>(2));
+                }                
+            }
+            return Persona;
         }
 
         public List<EPersona> ConsultaTodos()
         {
-            DataTable Dt = sDAL.RetornaDataTableVacio("Persona");
+            DataTable Dt = sDAL.Leer("Persona");
             List<EPersona> Personas = new List<EPersona>();
             foreach (DataRow dataRow in Dt.Rows)
             {
@@ -53,11 +62,11 @@ namespace ORM
             return Personas;
         }
 
-        public void Modificacion(EPersona pObject)
+        public void Modificacion(EPersona pObject, int IdViejo)
         {
-            DataTable Dt = sDAL.RetornaDataTableVacio("Persona");
+            DataTable Dt = sDAL.Leer("Persona");
             Dt.PrimaryKey = new DataColumn[] { Dt.Columns[0] };
-            DataRow Dr = Dt.Rows.Find(pObject.Id);
+            DataRow Dr = Dt.Rows.Find(IdViejo);
             Dr["Per_Id"] = pObject.Id;
             Dr["Per_Nombre"] = pObject.Nombre;
             Dr["Per_Apellido"] = pObject.Apellido;

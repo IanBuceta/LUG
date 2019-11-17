@@ -29,9 +29,9 @@ namespace BLL
             oPersona.Baja(pObject);
         }
 
-        public void Consulta(EPersona pObject)
+        public EPersona Consulta(EPersona pObject)
         {
-            throw new NotImplementedException();
+            return oPersona.Consulta(pObject);
         }
 
         public List<EPersona> ConsultaTodos()
@@ -39,9 +39,9 @@ namespace BLL
             return oPersona.ConsultaTodos();
         }
 
-        public void Modificacion(EPersona pObject)
+        public void Modificacion(EPersona pObject, int IdViejo)
         {
-            throw new NotImplementedException();
+            oPersona.Modificacion(pObject,IdViejo);
         }
     }
 }

@@ -19,12 +19,14 @@ namespace VL
         public Form1()
         {
             InitializeComponent();
+            
         }
 
         ControllerForm1 ControllerF1;
         private void Form1_Load(object sender, EventArgs e)
         {
             ControllerF1 = new ControllerForm1(this);
+            ControllerF1.Mostrar();
         }
 
         private void buttonAlta_Click(object sender, EventArgs e)
@@ -32,6 +34,7 @@ namespace VL
             try
             {
                 ControllerF1.Alta();
+                ControllerF1.Mostrar();
             }
             catch (Exception ex)
             {
@@ -44,11 +47,37 @@ namespace VL
             try
             {
                 ControllerF1.Baja();
+                ControllerF1.Mostrar();
             }
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
-                throw;
+            }
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                ControllerF1.Modificacion();
+                ControllerF1.Mostrar();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
+        private void dataGridPersona_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            try
+            {
+                ControllerF1.CeldaSeleccionada();
+                ControllerF1.Consulta();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
             }
         }
     }
