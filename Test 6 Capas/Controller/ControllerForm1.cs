@@ -60,9 +60,10 @@ namespace Controller
 
         public void Consulta()
         {
-            if (bPersona.Consulta(PersonaSeleccionada()) != null)
+            EPersona persona = bPersona.Consulta(PersonaSeleccionada());
+            if (persona != null)
             {
-                bPersona.Consulta(PersonaSeleccionada());
+                MessageBox.Show($"Id: {persona.Id}\nNombre: {persona.Nombre}\nApellido: {persona.Apellido}");
             }
         }
 
