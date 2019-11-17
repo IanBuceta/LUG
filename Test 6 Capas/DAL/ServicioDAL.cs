@@ -40,6 +40,15 @@ namespace DAL
             DataTable Dt = new DataTable();
             return Da.FillSchema(Dt, SchemaType.Mapped);
         }
+
+        public DataTable Leer(string NombreDataTable)
+        {            
+            DataTable Dt = new DataTable();
+            Da.SelectCommand.CommandText = $"Select * from {NombreDataTable}";
+            Da.Fill(Dt);
+            return Dt;
+        }
+
         public void Guardar(DataTable Dt)
         {
             Da.Update(Dt);
