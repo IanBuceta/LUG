@@ -128,9 +128,7 @@ namespace Vista
         private Inmueble InmuebleSeleccionado()
         {
             return dataGridInmuebles.SelectedRows[0].DataBoundItem as Inmueble;
-        }
-
-        
+        }       
 
         private void buttonGuardar_Click(object sender, EventArgs e)
         {
