@@ -32,11 +32,20 @@ namespace DalOrm
             GenerarTablaInmueble();
             GenerarDataRelation();
         }
-            
-        private void GenerarDataRelation()
+
+        private void GenerarTablaEmpleado()
         {
-            Dr = new DataRelation("EmpInmu", PkEmpleado, FkInmueble);
-            Ds.Relations.Add(Dr);
+            DaEmpleado = new SqlDataAdapter("Select * from Empleado", "Data Source = localhost; Initial Catalog = LUG; Integrated Security = True");
+            CbEmpleado = new SqlCommandBuilder(DaEmpleado);
+
+            DaEmpleado.InsertCommand = CbEmpleado.GetInsertCommand();
+            DaEmpleado.UpdateCommand = CbEmpleado.GetUpdateCommand();
+            DaEmpleado.DeleteCommand = CbEmpleado.GetDeleteCommand();
+
+            DaEmpleado.Fill(Ds, "Empleado");
+
+            PkEmpleado = Ds.Tables["Empleado"].Columns["Empleado_Id"];
+            Ds.Tables["Empleado"].PrimaryKey = new DataColumn[] { PkEmpleado };
         }
 
         private void GenerarTablaInmueble()
@@ -55,20 +64,14 @@ namespace DalOrm
             Ds.Tables["Inmueble"].PrimaryKey = new DataColumn[] { PkInmueble };
         }
 
-        private void GenerarTablaEmpleado()
+        private void GenerarDataRelation()
         {
-            DaEmpleado = new SqlDataAdapter("Select * from Empleado", "Data Source = localhost; Initial Catalog = LUG; Integrated Security = True");
-            CbEmpleado = new SqlCommandBuilder(DaEmpleado);
-
-            DaEmpleado.InsertCommand = CbEmpleado.GetInsertCommand();
-            DaEmpleado.UpdateCommand = CbEmpleado.GetUpdateCommand();
-            DaEmpleado.DeleteCommand = CbEmpleado.GetDeleteCommand();
-
-            DaEmpleado.Fill(Ds, "Empleado");
-
-            PkEmpleado = Ds.Tables["Empleado"].Columns["Empleado_Id"];
-            Ds.Tables["Empleado"].PrimaryKey = new DataColumn[] { PkEmpleado };
+            Dr = new DataRelation("EmpInmu", PkEmpleado, FkInmueble);
+            Ds.Relations.Add(Dr);
         }
+
+
+        
 
         public void AltaEmpleado(Empleado empleado)
         {
