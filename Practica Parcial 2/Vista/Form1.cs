@@ -100,7 +100,7 @@ namespace Vista
                 {
                     SolidBrush sB = new SolidBrush(Color.FromArgb(r.Next(0, 255), r.Next(0, 255), r.Next(0, 255)));
                     float altoMáximo = (float)(inmueble.ValorDeVenta * 100) / (float)inmuebles.Max(x => x.ValorDeVenta);
-                    gr.FillRectangle(sB, 400 + offsetX, 180 + 250 - altoMáximo, 20, altoMáximo);
+                    gr.FillRectangle(sB, 400 + offsetX, 430 - altoMáximo, 20, altoMáximo);
                     gr.DrawString(inmueble.ValorDeVenta.ToString(), new Font("Arial", 12), sB, 403 + offsetX, 430);
                     offsetX += 30;
                 }
