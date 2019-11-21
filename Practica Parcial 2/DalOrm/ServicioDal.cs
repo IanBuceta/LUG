@@ -117,9 +117,9 @@ namespace DalOrm
             {
                 Empleado empleado = new Empleado(dataRow.Row.Field<string>(0), dataRow.Row.Field<string>(1));
                 empleados.Add(empleado);
-                foreach (var inmueble in dataRow.Row.GetChildRows("EmpInmu"))
+                foreach (var childRow in dataRow.Row.GetChildRows("EmpInmu"))
                 {
-                    empleado.AgregarInmueble(new Inmueble(inmueble.Field<int>(0), inmueble.Field<string>(2), inmueble.Field<decimal>(3), inmueble.Field<DateTime>(4), inmueble.Field<DateTime>(5)));
+                    empleado.AgregarInmueble(new Inmueble(childRow.Field<int>(0), childRow.Field<string>(2), childRow.Field<decimal>(3), childRow.Field<DateTime>(4), childRow.Field<DateTime>(5)));
                 }
             }
 
